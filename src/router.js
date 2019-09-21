@@ -111,7 +111,7 @@ const router = new Router({
                   redirect: "/form/step-form/info"
                 },
                 {
-                  path: "/form/step-form",
+                  path: "/form/step-form/info",
                   name: "info",
                   component: () =>
                     import(
