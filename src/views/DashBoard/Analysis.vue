@@ -4,7 +4,6 @@
   </div>
 </template>
 <script>
-import random from "loadsh/random";
 import Chart from "../../components/Chart";
 import axios from "axios";
 export default {
@@ -23,7 +22,7 @@ export default {
       // this.chartOption = { ...this.chartOption };
     }, 2500);
   },
-  beforeMount() {
+  beforeDestroy() {
     clearInterval(this.interval);
   },
   components: {
