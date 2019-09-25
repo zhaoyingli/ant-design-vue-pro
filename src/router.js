@@ -83,7 +83,7 @@ const router = new Router({
           meta: {
             icon: "form",
             title: "表单",
-            authority: ["user"]
+            authority: ["admin"]
           },
           component: {
             render: h => h("router-view")
@@ -107,7 +107,7 @@ const router = new Router({
               name: "stepform",
               meta: {
                 title: "分步表单",
-                authority: ["user"]
+                authority: ["admin"]
               },
               hideChildrenInMenu: true,
               component: () =>
