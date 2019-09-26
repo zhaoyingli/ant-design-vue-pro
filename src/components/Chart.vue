@@ -25,7 +25,7 @@ export default {
     // }
   },
   created() {
-    this.resize = debounce(this.resize);
+    this.resize = debounce(this.resize, 300);
   },
   mounted() {
     this.renderChart();
