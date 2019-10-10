@@ -10,12 +10,14 @@ const state = {
 const actions = {
   async submitStepForm({ commit }, { payload }) {
     await request({
-      url: "/api/from",
+      url: "/api/form",
       method: "POST",
       data: payload
     });
-    commit("saveStepFormData", payload);
-    router.push("/form/step-from/result");
+    commit("saveStepFormData", {
+      payload
+    });
+    router.push("/form/step-form/result");
   }
 };
 
