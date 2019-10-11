@@ -1,6 +1,6 @@
 <template>
   <div :class="[`nav-theme-${navTheme}`, `nav-layout-${navLayout}`]">
-    <a-layout id="components-layout-demo-side" style="min-height: 100vh">
+    <a-layout class="components-layout-demo-side" style="min-height: 100vh">
       <a-layout-sider
         v-if="navLayout === 'left'"
         :theme="navTheme"
@@ -10,7 +10,7 @@
         width="256px"
       >
         <div class="logo">Ant Design Vue Pro</div>
-        <SiderMenu :collapsed="collapsed" :theme="navTheme" />
+        <SiderMenu :collapsed="collapsed" :theme="navTheme"/>
       </a-layout-sider>
       <a-layout>
         <a-layout-header style="background: #fff; padding: 0">
@@ -20,18 +20,18 @@
             :type="collapsed ? 'menu-unfold' : 'menu-fold'"
             @click="collapsed = !collapsed"
           ></a-icon>
-          <Header />
+          <Header/>
         </a-layout-header>
         <a-layout-content style="margin: 0 16px">
           <router-view></router-view>
         </a-layout-content>
         <a-layout-footer style="text-align: center">
-          <Footer />
+          <Footer/>
         </a-layout-footer>
       </a-layout>
     </a-layout>
     <Authorized :authority="['admin']">
-      <SettingDrawer />
+      <SettingDrawer/>
     </Authorized>
   </div>
 </template>
@@ -64,6 +64,9 @@ export default {
 </script>
 
 <style scoped>
+.components-layout-demo-side >>> .ant-menu-dark .ant-menu-item-selected {
+  color: #000;
+}
 .trigger {
   padding: 0 20px;
   line-height: 64px;
